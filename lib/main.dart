@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:japan_cars/bottombar.dart';
-import 'package:japan_cars/pages/home/ads_carousel.dart';
-import 'package:japan_cars/pages/home/home.dart';
-import 'package:japan_cars/tabbar_pages/tabbar.dart';
+import 'package:japan_cars/page_view.dart';
 
 void main() {
   runApp(const MyApp());

@@ -82,9 +82,7 @@ class _TabbarPageState extends State<TabbarPage>
         ],
         backgroundColor: transclr,
         leading: IconButton(
-            onPressed: () {
-              widget.onButtonPressed;
-            },
+            onPressed: widget.onButtonPressed,
             icon: Icon(Icons.arrow_back_ios)),
         title: jpCarsLogo,
         bottom: TabBar(
