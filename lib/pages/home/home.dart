@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:japan_cars/helpers/appColors.dart';
 import 'package:japan_cars/helpers/img.dart';
 import 'package:japan_cars/pages/home/ads_carousel.dart';
+import 'package:japan_cars/pages/home/cars_list.dart';
+import 'package:japan_cars/profile/profilePage.dart';
 import 'package:japan_cars/tabbar_pages/tabbar.dart';
 
 class HomePage extends StatefulWidget {
@@ -25,13 +27,17 @@ class _HomePageState extends State<HomePage> {
         title: jpCarsLogo,
         elevation: 0,
         backgroundColor: transclr,
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.person))],
+        actions: [IconButton(onPressed: () {Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) =>  ProfilePage()),
+  );}, icon: Icon(Icons.person))],
       ),
       backgroundColor: jpTheme.withOpacity(1),
       body: SingleChildScrollView(
         child: Container(
           margin: const EdgeInsets.only(bottom: 10),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -39,18 +45,15 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: ClipRRect(
-                      borderRadius: BorderRadius.circular(40),
+                      borderRadius: BorderRadius.circular(30),
                       child: Container(
-                        height: size.height * 0.19,
-                        width: size.height * 0.2,
+                        height: size.height * 0.1,
+                        width: size.height * 0.25,
                         color: Colors.white.withOpacity(0.3),
                         child: Center(
                           child: Padding(
-                            padding: const EdgeInsets.only(
-                              top: 12.0,
-                              left: 10,
-                              bottom: 10,
-                              right: 10,
+                            padding: const EdgeInsets.all(
+                              12,
                             ),
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -106,7 +109,8 @@ class _HomePageState extends State<HomePage> {
                         color: jpWhite,
                       ))
                 ],
-              )
+              ),
+              const CarList(),
             ],
           ),
         ),

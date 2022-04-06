@@ -10,15 +10,9 @@ class StockList extends StatelessWidget {
     return Scaffold(
       backgroundColor: jpTheme,
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(80),
-            child: Container(
-              height: size.height * 0.6,
-              color: Colors.white,
-            ),
-          ),
+        child: Container(
+          // height: size.height * 0.6,
+          // color: Colors.white,
         ),
       ),
     );

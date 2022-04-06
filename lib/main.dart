@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:japan_cars/bottombar.dart';
 import 'package:japan_cars/page_view.dart';
 
+import 'helpers/theme/ThemesController.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  final ThemesController themeController = Get.put(ThemesController());
+
+   MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override

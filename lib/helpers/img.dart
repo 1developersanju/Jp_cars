@@ -4,6 +4,7 @@ var jpCarsLogo = Image.network(
   "https://beta.japancars.co.jp/themes/japancars/images/brand/japancars-logo1.png",
   height: 30,
 );
+var car1 = Image.network("src");
 
 final List<String> imgList = [
   'https://images.unsplash.com/photo-1647332951832-3d641d743ea4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',

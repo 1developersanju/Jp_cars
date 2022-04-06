@@ -94,19 +94,19 @@ class _EmailSenderState extends State<EmailSender> {
                 ),
               ),
             ),
-            Expanded(
-              child: Padding(
-                padding: EdgeInsets.all(8.0),
-                child: TextField(
-                  controller: _bodyController,
-                  maxLines: null,
-                  expands: true,
-                  textAlignVertical: TextAlignVertical.top,
-                  decoration: InputDecoration(
-                      labelText: 'Body', border: OutlineInputBorder()),
-                ),
-              ),
-            ),
+
+            //   child: Padding(
+            //     padding: EdgeInsets.all(8.0),
+            //     child: TextField(
+            //       controller: _bodyController,
+            //       maxLines: null,
+            //       expands: true,
+            //       textAlignVertical: TextAlignVertical.top,
+            //       decoration: InputDecoration(
+            //           labelText: 'Body', border: OutlineInputBorder()),
+            //     ),
+
+            // ),
             CheckboxListTile(
               contentPadding:
                   EdgeInsets.symmetric(vertical: 0.0, horizontal: 8.0),

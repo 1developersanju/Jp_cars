@@ -42,49 +42,78 @@ class _TabbarPageState extends State<TabbarPage>
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        actions: [
-          currentIndex == 0
-              ? PopupMenuButton(
-                  onSelected: (value) {
-                    switch (value) {
-                      case 1:
-                    }
-                  },
-                  itemBuilder: (context) => [
-                        PopupMenuItem(
-                          child: Text("Select Make"),
-                          value: 1,
-                        ),
-                        PopupMenuItem(
-                          child: Text("Select Model"),
-                          value: 2,
-                        ),
-                        PopupMenuItem(
-                          child: Text("Select Year"),
-                          value: 3,
-                        ),
-                      ])
-              : PopupMenuButton(
-                  itemBuilder: (context) => [
-                        PopupMenuItem(
-                          child: Text("Select Auction"),
-                          value: 1,
-                        ),
-                        PopupMenuItem(
-                          child: Text("Select Model"),
-                          value: 2,
-                        ),
-                        PopupMenuItem(
-                          child: Text("Select Year"),
-                          value: 3,
-                        ),
-                      ])
-        ],
+        // actions: [
+        //   currentIndex == 0
+        //       ? PopupMenuButton(
+        //           onSelected: (value) {
+        //             switch (value) {
+        //               case 1:
+        //             }
+        //           },
+        //           itemBuilder: (context) => [
+        //                 PopupMenuItem(
+        //                   child: Text("Select Make"),
+        //                   value: 1,
+        //                 ),
+        //                 PopupMenuItem(
+        //                   child: Text("Select Model"),
+        //                   value: 2,
+        //                 ),
+        //                 PopupMenuItem(
+        //                   child: Text("Select Year"),
+        //                   value: 3,
+        //                 ),
+        //               ])
+        //       : PopupMenuButton(
+        //           itemBuilder: (context) => [
+        //                 PopupMenuItem(
+        //                   child: Text("Select Auction"),
+        //                   value: 1,
+        //                 ),
+        //                 PopupMenuItem(
+        //                   child: Text("Select Model"),
+        //                   value: 2,
+        //                 ),
+        //                 PopupMenuItem(
+        //                   child: Text("Select Year"),
+        //                   value: 3,
+        //                 ),
+        //               ])
+        // ],
         backgroundColor: transclr,
         leading: IconButton(
             onPressed: widget.onButtonPressed,
             icon: Icon(Icons.arrow_back_ios)),
-        title: jpCarsLogo,
+        title: Container(
+          height: 45,
+          decoration: BoxDecoration(
+              color: Colors.grey.shade300,
+              borderRadius: BorderRadius.circular(10)),
+          child: Center(
+            child: TextField(
+              decoration: InputDecoration(
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+                  hintText: "Search here",
+                  suffixIcon: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Container(
+                      width: 40,
+                      decoration: BoxDecoration(
+                          color: Colors.grey.shade300,
+                          borderRadius: BorderRadius.circular(10)),
+                      child: Center(
+                        child: Icon(
+                          Icons.sort,
+                          //   IconlyLight.filter,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ),
+                  )),
+            ),
+          ),
+        ),
         bottom: TabBar(
           tabs: const [
             Tab(

@@ -75,6 +75,9 @@ class _BtmBarState extends State<BtmBar> {
           PgView(),
           Container(
             color: Colors.amber,
+            child: Center(
+              child: Text("No willings"),
+            ),
           )
         ],
         actionBarView: EmailSender());
